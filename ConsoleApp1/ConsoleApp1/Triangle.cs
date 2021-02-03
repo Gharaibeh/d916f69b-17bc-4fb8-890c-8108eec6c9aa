@@ -9,12 +9,30 @@ namespace ConsoleApp1
     public class Triangle
     {
 
-        public float getArea(float a, float b, float c)
+        public float findArea(float a, float b, float c)
         {
-            float area = 0.0f;
+            validateDimentions(a, b, c);
+            validateTriangle(a, b, c);
+            
+            float s = (a + b + c) / 2;
+            return (float)Math.Sqrt(s * (s - a) * (s - b) * (s - c));
+        }
 
+        private void validateDimentions(float a,float b, float c)
+        {
+            if(a<0 || b<0 || c < 0)
+            {
+                throw new Exception("Dimention must be positive values, Not a valid triangle!");
+            }
+        }
 
-            return area;
+        private void validateTriangle(float a,float b, float c)
+        {
+            if ((a + b <= c) || a + c <= b || b + c <= a)
+            {
+                throw new Exception("Not a valid triangle!");
+            }
+
         }
     }
 }

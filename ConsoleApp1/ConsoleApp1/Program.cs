@@ -13,8 +13,10 @@ namespace ConsoleApp1
             try
             {
                 Triangle triangle = new Triangle();
-                printResult(triangle.getArea(3,4,5));
-               
+                printResult(triangle.findArea(3, 4, 5));
+                printResult(triangle.findArea(-3, 4, 5));
+                printResult(triangle.findArea(-10, 400, 50));
+
             }
             catch (Exception ex)
             {
