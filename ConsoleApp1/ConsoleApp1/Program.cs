@@ -27,6 +27,10 @@ namespace ConsoleApp1
             Console.ReadLine();
         }
 
+        /// <summary>
+        /// Print Triangle area 
+        /// </summary>
+        /// <param name="output"></param>
         static void printResult(float output)
         {
             Console.WriteLine("The area for this triangle is:\n" + output);

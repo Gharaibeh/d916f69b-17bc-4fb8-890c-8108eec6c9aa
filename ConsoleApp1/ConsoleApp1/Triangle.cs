@@ -8,7 +8,13 @@ namespace ConsoleApp1
 {
     public class Triangle
     {
-
+        /// <summary>
+        /// Find the Triangle area
+        /// </summary>
+        /// <param name="side1"></param>
+        /// <param name="side2"></param>
+        /// <param name="side3"></param>
+        /// <returns></returns>
         public float findArea(float side1, float side2, float side3)
         {
             validateDimentions(side1, side2, side3);
@@ -19,6 +25,12 @@ namespace ConsoleApp1
             return (float)Math.Round(result, 2);
         }
 
+        /// <summary>
+        /// Validate of one is negative
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <param name="c"></param>
         private void validateDimentions(float a, float b, float c)
         {
             if (a < 0 || b < 0 || c < 0)
@@ -27,6 +39,12 @@ namespace ConsoleApp1
             }
         }
 
+        /// <summary>
+        /// Validate if Triangle can be formed
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <param name="c"></param>
         private void validateTriangle(float a, float b, float c)
         {
             if ((a + b <= c) || a + c <= b || b + c <= a)
